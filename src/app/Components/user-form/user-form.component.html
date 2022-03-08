@@ -1,0 +1,43 @@
+<form [formGroup]="infoMember" class="user-form">
+  <h1 class="user-form__title">{{ title }}</h1>
+  <mat-form-field class="form-input" appearance="fill">
+    <mat-label [attr.disabled]="true">Mã thành viên</mat-label>
+    <input
+      [attr.disabled]="true"
+      matInput="disabled"
+      formControlName="memberCode"
+    />
+  </mat-form-field>
+  <!-- done -->
+  <mat-form-field class="form-input" appearance="fill">
+    <mat-label>Ảnh đại diện</mat-label>
+    <input matInput formControlName="image" />
+  </mat-form-field>
+  <!-- done -->
+  <mat-form-field class="form-input" appearance="fill">
+    <mat-label>Tên thành viên</mat-label>
+    <input matInput formControlName="name" />
+  </mat-form-field>
+  <!-- done -->
+  <mat-form-field class="form-input" appearance="fill">
+    <mat-label>Giới tính</mat-label>
+    <input matInput formControlName="gender" />
+  </mat-form-field>
+  <!-- done -->
+  <mat-form-field class="form-input" appearance="fill">
+    <mat-label>Chức vụ</mat-label>
+    <input matInput formControlName="level" />
+  </mat-form-field>
+  <!-- done -->
+  <div class="user-form__btn">
+    <button-custom
+      btnContent="Trở về trang chủ"
+      icon=""
+      (onClicked)="backHome()"
+    ></button-custom>
+    <button-custom
+      btnContent="{{ text__btn }}"
+      (onClicked)="submit()"
+    ></button-custom>
+  </div>
+</form>

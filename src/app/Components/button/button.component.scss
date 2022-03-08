@@ -1,0 +1,29 @@
+.btn {
+  padding: 1rem 1.5rem;
+  background-color: rgb(63, 63, 196);
+  transition: 0.2s;
+  outline: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(52, 52, 224);
+  }
+  &.outline {
+    border: 1px solid #7a7a7a;
+    color: black;
+    background-color: transparent;
+    transition: 0.2s;
+    &:hover {
+      background-color: rgb(52, 52, 224);
+      color: white;
+      border-color: rgb(52, 52, 224);
+    }
+  }
+  &.disable {
+    display: none;
+  }
+  span {
+    margin-left: 0.5rem;
+  }
+}

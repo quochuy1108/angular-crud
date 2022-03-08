@@ -1,0 +1,32 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.308);
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  &__content {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    background-color: white;
+    color: rgb(70, 70, 214);
+    padding: 1.5rem;
+    transition: 1s;
+    * ~ * {
+      float: right;
+    }
+  }
+  &.active .modal__content {
+    top: 12%;
+  }
+}

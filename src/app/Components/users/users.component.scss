@@ -1,0 +1,81 @@
+.display-users {
+  box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.13);
+  width: 90vw;
+  padding: 1.5rem;
+  max-height: 700px;
+  overflow-y: auto;
+  &__title {
+    margin-bottom: 1.5rem;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-size: 20px;
+    .total-user {
+    }
+    .search {
+      input {
+      }
+    }
+  }
+  &__body {
+    margin-top: 1.5rem;
+    .avatar {
+      width: 150px;
+      height: 200px;
+      &__img {
+        object-fit: cover;
+        height: 100%;
+      }
+    }
+  }
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #7a7a7a;
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+td {
+  .view,
+  .edit,
+  .delete {
+    color: white;
+    padding: 20px 0px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  .view {
+    background-color: rgb(70, 70, 214);
+    &:hover {
+      background-color: rgb(57, 57, 255);
+    }
+  }
+  .edit {
+    background-color: rgb(224, 157, 32);
+    &:hover {
+      background-color: rgb(255, 179, 38);
+    }
+  }
+  .delete {
+    background-color: rgb(172, 23, 23);
+    &:hover {
+      background-color: rgb(230, 36, 36);
+    }
+  }
+}

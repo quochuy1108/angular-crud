@@ -1,0 +1,54 @@
+<div class="display-users">
+  <h1 class="display-users__title">Danh sách thành viên</h1>
+  <div class="display-users__header">
+    <div class="total-user">
+      Tổng số thành viên: <strong>{{ totalUser }}</strong>
+    </div>
+    <button-custom
+      btnContent="Thêm thành viên"
+      (onClicked)="goToForm()"
+      className="alo"
+    ></button-custom>
+  </div>
+
+  <div class="display-users__body">
+    <table>
+      <tr>
+        <th>STT</th>
+        <th>Mã thành viên</th>
+        <th>Ảnh</th>
+        <th>Tên thành viên</th>
+        <th>Giới tính</th>
+        <th>Chức vụ</th>
+
+        <th>Sửa</th>
+        <th>Xóa</th>
+      </tr>
+
+      <tr *ngFor="let user of dataUsers">
+        <td>{{ user.id }}</td>
+        <td>{{ user.memberCode }}</td>
+        <td class="avatar">
+          <div *ngIf="user.image" class="avatar__img">
+            <img src="{{ user.image }}" alt="avatar" />
+          </div>
+          <div *ngIf="!user.image">Chưa có ảnh</div>
+        </td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.gender }}</td>
+        <td>{{ user.level }}</td>
+
+        <td>
+          <div class="edit" (click)="editUser(user.id)">
+            <i class="fa fa-pen"></i>
+          </div>
+        </td>
+        <td>
+          <div class="delete" (click)="deleteUser(user.id)">
+            <i class="fa fa-trash"></i>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
