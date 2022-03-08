@@ -1,117 +1,22 @@
 {
   "users": [
     {
-      "id": 3,
-      "memberCode": "51",
-      "image": null,
-      "name": "123",
-      "gender": "123",
-      "level": "123123"
+      "id": 1,
+      "memberCode": "abcd1234",
+      "image": "https://toigingiuvedep.vn/wp-content/uploads/2021/07/mau-anh-the-dep-lam-the-can-cuoc.jpg",
+      "name": "Long",
+      "gender": "Nam",
+      "level": "Nhân viên"
     },
     {
-      "id": 4,
-      "memberCode": "huy",
-      "image": "https://nghialagi.org/wp-content/uploads/2020/03/background-la-gi.jpg",
-      "name": "123",
-      "gender": "asd",
-      "level": "312"
-    },
-    {
-      "id": 5,
-      "memberCode": "huy23123",
+      "id": 2,
+      "memberCode": "abcd32",
       "image": null,
-      "name": "ádsad",
-      "gender": "123",
-      "level": "qwdqwd"
-    },
-    {
-      "id": 6,
-      "memberCode": "huy23123",
-      "image": null,
-      "name": "ad",
-      "gender": "ad",
-      "level": "asd"
-    },
-    {
-      "id": 7,
-      "memberCode": "asd",
-      "image": null,
-      "name": "asd",
-      "gender": "asd",
-      "level": "asd"
-    },
-    {
-      "id": 8,
-      "memberCode": "asd",
-      "image": null,
-      "name": "asd",
-      "gender": "asd",
-      "level": "asd"
-    },
-    {
-      "id": 9,
-      "memberCode": "asd",
-      "image": null,
-      "name": "asd",
-      "gender": "asd",
-      "level": "asd"
-    },
-    {
-      "id": 10,
-      "memberCode": "asd",
-      "image": null,
-      "name": "asd",
-      "gender": "asd",
-      "level": "asd"
-    },
-    {
-      "id": 11,
-      "memberCode": "asd",
-      "image": null,
-      "name": "asd",
-      "gender": "asd",
-      "level": "asd"
-    },
-    {
-      "id": 12,
-      "memberCode": "asd",
-      "image": null,
-      "name": "asd",
-      "gender": "asd",
-      "level": "asd"
-    },
-    {
-      "id": 13,
-      "memberCode": "asd",
-      "image": null,
-      "name": "asd",
-      "gender": "asd",
-      "level": "asd"
-    },
-    {
-      "id": 14,
-      "memberCode": "123",
-      "image": null,
-      "name": "123",
-      "gender": "123",
-      "level": "123"
-    },
-    {
-      "id": 15,
-      "memberCode": "asd",
-      "image": null,
-      "name": "asd",
-      "gender": "asd",
-      "level": "asd"
-    },
-    {
-      "id": 16,
-      "memberCode": "asd",
-      "image": null,
-      "name": "asd",
-      "gender": "asd",
-      "level": "asd"
+      "name": "Huy",
+      "gender": "Name",
+      "level": "Nhân viên"
     }
+
   ],
   "posts": [
     {
