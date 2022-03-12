@@ -1,0 +1,36 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 56px;
+  background-color: rgb(70, 70, 214);
+  width: 100%;
+  z-index: 10;
+  &__container {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__left {
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: white;
+    }
+  }
+  &__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    li ~ li {
+      margin-left: 1rem;
+    }
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}

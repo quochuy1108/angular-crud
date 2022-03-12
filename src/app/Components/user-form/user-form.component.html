@@ -1,12 +1,20 @@
 <form [formGroup]="infoMember" class="user-form">
   <h1 class="user-form__title">{{ title }}</h1>
   <mat-form-field class="form-input" appearance="fill">
-    <mat-label [attr.disabled]="true">Mã thành viên</mat-label>
-    <input
-      [attr.disabled]="true"
-      matInput="disabled"
-      formControlName="memberCode"
-    />
+    <mat-label>Tên thành viên</mat-label>
+    <input matInput formControlName="name" />
+    <div
+      *ngIf="
+        form['name'].invalid && (form['name'].dirty || form['name'].touched)
+      "
+    >
+      <div class="user-form__error" *ngIf="form['name'].errors?.['required']">
+        Vui lòng nhập trường này
+      </div>
+      <div class="user-form__error" *ngIf="form['name'].errors?.['minlength']">
+        Phải có ít nhất 2 kí tự
+      </div>
+    </div>
   </mat-form-field>
   <!-- done -->
   <mat-form-field class="form-input" appearance="fill">
@@ -15,23 +23,57 @@
   </mat-form-field>
   <!-- done -->
   <mat-form-field class="form-input" appearance="fill">
-    <mat-label>Tên thành viên</mat-label>
-    <input matInput formControlName="name" />
+    <mat-label>Số điện thoại</mat-label>
+    <input matInput="number" formControlName="phone" />
+    <div
+      *ngIf="
+        form['phone'].invalid && (form['phone'].dirty || form['phone'].touched)
+      "
+    >
+      <div
+        class="user-form__error"
+        *ngIf="form['phone'].errors?.['required'] || form['phone'].errors?.['pattern'] || form['phone'].errors?.['minlength'] || form['phone'].errors?.['maxlength']"
+      >
+        Số điện thoại phải gồm 10 chữ số
+      </div>
+    </div>
   </mat-form-field>
   <!-- done -->
   <mat-form-field class="form-input" appearance="fill">
-    <mat-label>Giới tính</mat-label>
-    <input matInput formControlName="gender" />
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email" />
+    <div
+      *ngIf="
+        form['email'].invalid && (form['email'].dirty || form['email'].touched)
+      "
+    >
+      <div class="user-form__error" *ngIf="form['email'].errors?.['required']">
+        Vui lòng nhập trường này
+      </div>
+      <div class="user-form__error" *ngIf="form['email'].errors?.['email']">
+        Trường này phải là email
+      </div>
+    </div>
   </mat-form-field>
   <!-- done -->
   <mat-form-field class="form-input" appearance="fill">
     <mat-label>Chức vụ</mat-label>
     <input matInput formControlName="level" />
+    <div
+      *ngIf="
+        form['level'].invalid && (form['level'].dirty || form['level'].touched)
+      "
+    >
+      <div class="user-form__error" *ngIf="form['level'].errors?.['required']">
+        Vui lòng nhập trường này
+      </div>
+    </div>
   </mat-form-field>
+
   <!-- done -->
   <div class="user-form__btn">
     <button-custom
-      btnContent="Trở về trang chủ"
+      btnContent="Trở về "
       icon=""
       (onClicked)="backHome()"
     ></button-custom>

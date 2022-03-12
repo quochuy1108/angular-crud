@@ -1,0 +1,67 @@
+<div class="login">
+  <form [formGroup]="form" class="form">
+    <h2 class="form__title">Đăng nhập</h2>
+
+    <div class="form__item">
+      <label for="">Email</label>
+      <input
+        type="email"
+        placeholder="Nhập email"
+        formControlName="email"
+        (keyup)="setInputChange($event, 'email')"
+        (blur)="setInputBlur($event, 'email')"
+        [class.errorInput]="errorInputActive"
+      />
+      <!-- <div *ngIf="!isValueSubmit" class="error-msg">
+        Bạn chưa nhập trường này
+      </div> -->
+
+      <div
+        *ngIf="f['email'].invalid && (f['email'].dirty || f['email'].touched)"
+      >
+        <div *ngIf="f['email'].errors?.['required']" class="error-msg">
+          Bạn chưa nhập trường này
+        </div>
+        <div *ngIf="f['email'].errors?.['email']" class="error-msg">
+          Email không hợp lệ
+        </div>
+      </div>
+      <div *ngIf="isValueChange">Bạn chưa nhập trường này</div>
+    </div>
+    <div class="form__item">
+      <label for="">Password</label>
+      <input
+        type="text"
+        placeholder="Nhập mật khẩu"
+        formControlName="password"
+        (keyup)="setInputChange($event, 'password')"
+        (blur)="setInputBlur($event, 'password')"
+        [class.errorInput]="errorInputActive"
+      />
+      <!-- <div *ngIf="!isValueSubmit" class="error-msg">
+        Bạn chưa nhập trường này
+      </div> -->
+      <div
+        *ngIf="
+          f['password'].invalid &&
+          (f['password'].dirty || f['password'].touched)
+        "
+      >
+        <div *ngIf="f['password'].errors?.['required']" class="error-msg">
+          Bạn chưa nhập trường này
+        </div>
+        <div *ngIf="f['password'].errors?.['minlength']" class="error-msg">
+          Mật khẩu phải có ít nhất 6 kí tự
+        </div>
+      </div>
+    </div>
+    <p *ngIf="accountNotFound" class="error">
+      Tài khoản của bạn không tồn tại, vui lòng nhập lại
+    </p>
+    <button-custom
+      className="w-100"
+      btnContent="Login"
+      (click)="submit()"
+    ></button-custom>
+  </form>
+</div>

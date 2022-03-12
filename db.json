@@ -2,21 +2,52 @@
   "users": [
     {
       "id": 1,
-      "memberCode": "abcd1234",
-      "image": "https://toigingiuvedep.vn/wp-content/uploads/2021/07/mau-anh-the-dep-lam-the-can-cuoc.jpg",
-      "name": "Long",
-      "gender": "Nam",
+      "phone": "0123456789",
+      "image": "https://topquangngai.vn/wp-content/uploads/2021/02/chup-anh-the-dep-quang-ngai-7.jpg",
+      "name": "Hoàngg",
+      "email": "Hoang@gmail.com",
       "level": "Nhân viên"
     },
     {
       "id": 2,
-      "memberCode": "abcd32",
+      "phone": "1234567890",
+      "image": "https://nghialagi.org/wp-content/uploads/2020/03/background-la-gi.jpg",
+      "name": "Long123456",
+      "email": "long@gmail.com",
+      "level": "Kế toán"
+    },
+    {
+      "id": 3,
+      "phone": "1234567546",
       "image": null,
-      "name": "Huy",
-      "gender": "Name",
-      "level": "Nhân viên"
+      "name": "huy2",
+      "email": "huy@gmail.com",
+      "level": "nhân viên"
+    },
+    {
+      "id": 4,
+      "phone": "6234234141",
+      "image": null,
+      "name": "huy23123",
+      "email": "g@fad",
+      "level": "dasd"
+    },
+    {
+      "id": 5,
+      "phone": "1231231233",
+      "image": null,
+      "name": "huy23123",
+      "email": "g@d",
+      "level": "asdas"
+    },
+    {
+      "id": 6,
+      "phone": "1312321313",
+      "image": null,
+      "name": "huy23123",
+      "email": "F@d",
+      "level": "12313"
     }
-
   ],
   "posts": [
     {

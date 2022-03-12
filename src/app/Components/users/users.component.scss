@@ -1,9 +1,11 @@
 .display-users {
   box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.13);
-  width: 90vw;
+  width: 1200px;
   padding: 1.5rem;
-  max-height: 700px;
+  max-height: 610px;
   overflow-y: auto;
+  margin: 0 auto;
+  margin-top: 56px + 32px;
   &__title {
     margin-bottom: 1.5rem;
   }
@@ -17,6 +19,15 @@
     }
     .search {
       input {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid;
+        padding: 0.5rem;
+        background-color: rgb(70, 70, 214);
+        color: white;
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.74);
+        }
       }
     }
   }

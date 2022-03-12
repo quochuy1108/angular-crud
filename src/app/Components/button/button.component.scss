@@ -1,11 +1,12 @@
 .btn {
-  padding: 1rem 1.5rem;
+  padding: 12px 20px;
   background-color: rgb(63, 63, 196);
   transition: 0.2s;
   outline: none;
   color: white;
   border: none;
   cursor: pointer;
+
   &:hover {
     background-color: rgb(52, 52, 224);
   }
@@ -25,5 +26,8 @@
   }
   span {
     margin-left: 0.5rem;
+  }
+  &.w-100 {
+    width: 100%;
   }
 }

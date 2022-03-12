@@ -14,6 +14,8 @@ export class UsersComponent implements OnInit {
 
   public dataUsers: Users[] = [];
 
+  public searchText:any=''
+
 
   constructor(private router:Router,private httpClient:HttpService) { }
 
@@ -47,5 +49,6 @@ this.httpClient.deleteUser(id).subscribe(data=>{
   public editUser(id:number){
     this.router.navigate([`user-form/${id}`])
   }
+
 
 }

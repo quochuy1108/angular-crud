@@ -3,11 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 
 import {UsersComponent} from './Components/users/users.component'
 import {UserFormComponent} from './Components/user-form/user-form.component'
+import { LoginComponent } from './Components/login/login.component';
+import {AuthGuard} from './auth.guard'
 
 const routes: Routes = [
-  { path: '', component: UsersComponent },
-  { path: 'user-form', component: UserFormComponent },
-  { path: 'user-form/:id', component: UserFormComponent },
+  { path: 'home', component: UsersComponent,canActivate: [AuthGuard] },
+  { path: 'user-form', component: UserFormComponent,canActivate: [AuthGuard]},
+  { path: 'user-form/:id', component: UserFormComponent,canActivate: [AuthGuard] },
+  { path: 'login', component: LoginComponent },
+  { path: '', redirectTo:'/login',pathMatch:'full' },
 
 ];
 

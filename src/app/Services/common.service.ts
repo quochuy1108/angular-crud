@@ -5,12 +5,27 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class CommonService {
-  public activeModal:any = false;
-  public activeModal$ = new BehaviorSubject<any>(false)
+  //  activeModal:any = false;
+   activeModal$ = new BehaviorSubject<any>(false)
+   isLoggedIn:boolean = false
+   isLoggedIn$ = new BehaviorSubject<any>(false)
+
   constructor() {}
 
-  setActiveModal(payload:any):void{
-    this.activeModal= payload
+  public setActiveModal(payload:any):void{
     this.activeModal$.next(payload)
   }
+
+   setLoggedIn(payload:boolean){
+    this.isLoggedIn = payload
+    console.log('loginCommon',this.isLoggedIn);
+    this.isLoggedIn$.next(payload)
+  }
+
+
+
+   getToken():boolean{
+    if(localStorage.getItem('token')) return true;
+  return false;
+}
 }

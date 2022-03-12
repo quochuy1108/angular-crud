@@ -1,3 +1,4 @@
+@import "../../../variables.scss";
 .modal {
   position: fixed;
   top: 0;
@@ -8,6 +9,7 @@
   overflow: hidden;
   opacity: 0;
   visibility: hidden;
+  z-index: 20;
   &.active {
     opacity: 1;
     visibility: visible;

@@ -1,9 +1,9 @@
 export interface Users {
   id:number,
-  memberCode:string,
-  image:string,
   name:string,
-  gender:string,
+  image:string,
+  phone:number,
+  email:string,
   level:string
 
 }

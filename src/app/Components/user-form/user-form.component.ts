@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
-import { FormBuilder,Validators,FormGroup  } from '@angular/forms';
+import { FormBuilder,Validators  } from '@angular/forms';
 import { HttpService } from 'src/app/Services/http.service';
 import {Users} from '../../model/User'
 import { ActivatedRoute } from '@angular/router';
 import { CommonService } from 'src/app/Services/common.service';
+
 
 
 @Component({
@@ -21,15 +22,21 @@ export class UserFormComponent implements OnInit {
 
   public infoMember = this.fb.group({
     id:[null],
-    memberCode:[null,[Validators.required]],
+    phone:[null,[Validators.required,Validators.pattern('[0-9 ]*'),Validators.minLength(10),Validators.maxLength(10)]],
     image:[null],
-    name:[null,[Validators.required]],
-    gender:[null,[Validators.required]],
+    name:[null,[Validators.required,Validators.minLength(2)]],
+    email:[null,[Validators.required,Validators.email]],
     level:[null,[Validators.required]],
 
   });
 
   constructor( private location: Location,private fb: FormBuilder,private httpClient: HttpService,private route:ActivatedRoute,private common: CommonService) { }
+
+get form() {
+  return this.infoMember.controls
+}
+
+
 
   ngOnInit(): void {
     const idParam = +this.route.snapshot.params['id']
@@ -39,16 +46,18 @@ export class UserFormComponent implements OnInit {
         console.log('getUserById',data);
         this.infoMember.setValue({
           id:data.id,
-          memberCode:data.memberCode,
+          phone:data.phone,
           image:data.image,
           name:data.name,
-          gender:data.gender,
+          email:data.email,
           level:data.level,
         })
       })
     }else {
       this.text__btn = 'Xác nhận và thêm mới'
   }
+  console.log('form-controls',this.form);
+
   }
 
 
@@ -74,19 +83,10 @@ export class UserFormComponent implements OnInit {
         console.log('ADD',data);
 
       })
-      this.infoMember.setValue({
-        id:' ',
-        memberCode:' ',
-        image:' ',
-        name:' ',
-        gender:' ',
-        level:' ',
-      })
+      this.infoMember.reset()
       this.common.setActiveModal(true)
     }
-    this.common.setActiveModal(true)
 
-    console.log('user-form',this.common.activeModal);
 
   }
 
